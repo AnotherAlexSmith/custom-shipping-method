@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <SnowCommerce_CustomShippingMethod> //CustomShippingMethod - имя метода. везде далее по тексту так же
+            <version>0.1.0</version>
+        </SnowCommerce_CustomShippingMethod>
+    </modules>
+    <admin>
+        <routers>
+            <sc_custom_shipping> //sc_custom_shipping - алиас метода. далее по тексту так же
+                <use>admin</use>
+                <args>
+                    <module>SnowCommerce_CustomShippingMethod</module>
+                    <frontName>sc_custom_shipping</frontName>
+                </args>
+            </sc_custom_shipping>
+        </routers>
+    </admin>
+    <global>
+        <models>
+            <sc_custom_shipping>
+                <class>SnowCommerce_CustomShippingMethod_Model</class>
+            </sc_custom_shipping>
+        </models>
+        <blocks>
+            <sc_custom_shipping>
+                <class>SnowCommerce_CustomShippingMethod_Block</class>
+            </sc_custom_shipping>
+        </blocks>
+        <helpers>
+            <sc_custom_shipping>
+                <class>SnowCommerce_CustomShippingMethod_Helper</class>
+            </sc_custom_shipping>
+        </helpers>
+        <resources>
+            <sc_custom_shipping_setup>
+                <setup>
+                    <module>SnowCommerce_CustomShippingMethod</module>
+                </setup>
+            </sc_custom_shipping_setup>
+        </resources>
+    </global>
+    <default>
+        <carriers>
+            <sc_custom_shipping>
+                <active>1</active>
+                <model>sc_custom_shipping/carrier_ship</model>
+                <title>Carrier Title</title>
+                <name>Method Name</name>
+                <price>5.00</price>
+                <specificerrmsg>This shipping method is currently unavailable. If you would like to ship using this shipping method, please contact us.</specificerrmsg>
+            </sc_custom_shipping>
+        </carriers>
+    </default>
+</config>

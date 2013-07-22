@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <SnowCommerce_CustomShippingMethod> //пространство имен _ название метода. то же самое в имени файла
+            <active>true</active>
+            <codePool>local</codePool>
+        </SnowCommerce_CustomShippingMethod>
+    </modules>
+</config>
